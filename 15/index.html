@@ -38,7 +38,10 @@
         var items = document.querySelectorAll("#source > li");
         console.log(items);
         var rex = /(.*)空气质量：<b>(\d*)<\/b>/;
+<<<<<<< HEAD
         //hhh
+=======
+>>>>>>> origin/master
         for (var i = 0; i < items.length; i++) {
             var str = items[i].innerHTML;
             var match = rex.exec(str);
@@ -64,6 +67,7 @@
      * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
      * 格式见ul中的注释的部分
      */
+<<<<<<< HEAD
 //    function render(data) {
 //        var str = "";
 //        data.forEach(function (element, index, array) {
@@ -72,6 +76,16 @@
 //        var resort_ul = document.getElementById("resort");
 //        resort_ul.innerHTML = str;
 //    }
+=======
+    function render(data) {
+        var str = "";
+        data.forEach(function (element, index, array) {
+            str += ("<li>第" + (index + 1) + "名:" + element[0] + ":<b>" + element[1] + "</b>" );
+        });
+        var resort_ul = document.getElementById("resort");
+        resort_ul.innerHTML = str;
+    }
+>>>>>>> origin/master
     function btnHandle() {
         var aqiData = getData();
         aqiData = sortAqiData(aqiData);
